@@ -1,4 +1,4 @@
-package io.arenadata.keycloak.providers.yandex;
+package io.kazanexpress.keycloak.providers.yandex;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import org.jboss.logging.Logger;

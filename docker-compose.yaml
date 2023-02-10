@@ -1,0 +1,15 @@
+# write a docker compose to run keycloak and postgres
+version: '3.7'
+services:
+  keycloak:
+    image: ghcr.io/kazanexpress/keycloak-kazanexpress:20-0.2.0
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: password
+    command:
+    - start
+    - --http-enabled=true
+    - --proxy=edge
+    - --hostname-strict=false
+    ports:
+      - 8080:8080

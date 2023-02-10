@@ -1,4 +1,4 @@
-package io.arenadata.keycloak.providers.yandex;
+package io.kazanexpress.keycloak.providers.yandex;
 
 import org.keycloak.broker.oidc.mappers.AbstractJsonUserAttributeMapper;
 

@@ -1,4 +1,4 @@
-package io.arenadata.keycloak.providers.yandex;
+package io.kazanexpress.keycloak.providers.yandex;
 
 import org.keycloak.broker.oidc.OAuth2IdentityProviderConfig;
 import org.keycloak.models.IdentityProviderModel;
@@ -13,12 +13,12 @@ public class YandexIdentityProviderConfig extends OAuth2IdentityProviderConfig {
     }
 
     public String getHostedDomain() {
-        String hostedDomain = getConfig().get("hostedDomain")       ;
+        String hostedDomain = getConfig().get("yandexHostedDomain")       ;
         return hostedDomain == null || hostedDomain.isEmpty() ? null : hostedDomain;
     }
 
     public void setHostedDomain(final String hostedDomain) {
-        getConfig().put("hostedDomain", hostedDomain);
+        getConfig().put("yandexHostedDomain", hostedDomain);
     }
 
 }

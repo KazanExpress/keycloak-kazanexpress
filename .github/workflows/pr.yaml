@@ -1,0 +1,22 @@
+name: CI/CD
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Install dependencies
+      run: |
+        wget -O ./hadolint https://github.com/hadolint/hadolint/releases/download/v2.10.0/hadolint-Linux-x86_64
+        sudo chmod +x ./hadolint
+        npm install -g eslint commitizen jq
+    - name: Linting Dockerfile
+      run: ./hadolint Dockerfile
+    - name: Linting JavaScript files
+      run: npx eslint .

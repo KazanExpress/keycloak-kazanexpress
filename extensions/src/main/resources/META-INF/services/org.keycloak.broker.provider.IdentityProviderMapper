@@ -1,1 +1,1 @@
-io.arenadata.keycloak.providers.yandex.YandexUserAttributeMapper
+io.kazanexpress.keycloak.providers.yandex.YandexUserAttributeMapper

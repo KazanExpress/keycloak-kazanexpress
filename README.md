@@ -1,12 +1,13 @@
-# Arenadata Keycloak Customization
-
-![Arenadata theme screenshot](screenshot.png)
+# KazanExpress Keycloak Customization
 
 Includes:
 
-- Yandex identity provider with `hostedDomain` parameter support;
-- corporate login theme;
+- Yandex identity provider with `yandexHostedDomain` parameter support;
 - Dockerfile to build application image in Quarkus style.
+
+## ToDo
+
+- corporate login theme;
 
 ## How to build
 
@@ -33,7 +34,7 @@ To run with `docker-compose`, use the following configuration:
 version: "3"
 services:
   keycloak:
-    image: hub.adsw.io/library/keycloak-arenadata:17-0.1.0
+    image: hub.adsw.io/library/keycloak-kazanexpress:17-0.1.0
     environment:
       KC_DB_URL: "jdbc:postgresql://hostname:port/database"
       KC_DB_USERNAME: user
@@ -43,7 +44,7 @@ services:
     command: start --http-enabled=true --proxy=edge --hostname-strict=false
 ```
 
-You can tune some build parameters (e.g. add new plugins or change URI path 
+You can tune some build parameters (e.g. add new plugins or change URI path
 prefix) in `--auto-build` mode, for example:
 
 ```
@@ -52,4 +53,3 @@ prefix) in `--auto-build` mode, for example:
 
 Use `--auto-build` only in debug or quick fix mode, for production it's better
 to rebuild optimized container using Dockerfile.
-

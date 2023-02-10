@@ -1,1 +1,1 @@
-io.arenadata.keycloak.providers.yandex.YandexIdentityProviderFactory
+io.kazanexpress.keycloak.providers.yandex.YandexIdentityProviderFactory
