@@ -28,5 +28,5 @@ jobs:
         env:
           SOURCE_TAG: ${{ steps.branch_name.outputs.SOURCE_TAG }}
         run: |
-          docker build --build-arg VERSION=${SOURCE_TAG#v} --tag "ghcr.io/kazanexpress/${{ github.event.repository.name }}:20.0.3-$SOURCE_TAG" --tag "ghcr.io/kazanexpress/${{ github.event.repository.name }}:latest" .
+          docker build --build-arg VERSION=${SOURCE_TAG#v} --tag "ghcr.io/kazanexpress/${{ github.event.repository.name }}:21.1.1-$SOURCE_TAG" --tag "ghcr.io/kazanexpress/${{ github.event.repository.name }}:latest" .
           docker push --all-tags ghcr.io/kazanexpress/${{ github.event.repository.name }}
