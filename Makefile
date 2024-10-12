@@ -2,7 +2,7 @@
 -include .env
 VERSION:=0.2.0
 KC_ARG?=""
-IMAGE="ghcr.io/kazanexpress/keycloak-kazanexpress:20-${VERSION}"
+IMAGE="ghcr.io/kazanexpress/keycloak-kazanexpress:26-${VERSION}"
 build:
 	docker build --build-arg VERSION=${VERSION} -t ${IMAGE} .
 start start-dev: build
