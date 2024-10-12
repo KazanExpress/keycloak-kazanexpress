@@ -1,5 +1,6 @@
 ARG VERSION=
-ARG KEYCLOAK_VERSION=21.1.1-debian-11-r0
+#ARG KEYCLOAK_VERSION=21.1.1-debian-11-r0
+ARG KEYCLOAK_VERSION=26.0.0
 
 # Build extensions.
 FROM maven:3-openjdk-17 as builder
