@@ -40,7 +40,7 @@ public class YandexIdentityProvider extends AbstractOAuth2IdentityProvider<Yande
 
     @Override
     protected BrokeredIdentityContext extractIdentityFromProfile(EventBuilder event, JsonNode profile) {
-        BrokeredIdentityContext user = new BrokeredIdentityContext(getJsonProperty(profile, "id"));
+        BrokeredIdentityContext user = new BrokeredIdentityContext(getJsonProperty(profile, "id"), getConfig());
         String domain = ((YandexIdentityProviderConfig) getConfig()).getHostedDomain();
 
         String email = getJsonProperty(profile, "default_email");
@@ -60,7 +60,7 @@ public class YandexIdentityProvider extends AbstractOAuth2IdentityProvider<Yande
         user.setFirstName(getJsonProperty(profile, "first_name"));
         user.setLastName(getJsonProperty(profile, "last_name"));
 
-        user.setIdpConfig(getConfig());
+        //user.setIdpConfig(getConfig());
         user.setIdp(this);
 
         AbstractJsonUserAttributeMapper.storeUserProfileForMapper(user, profile, getConfig().getAlias());

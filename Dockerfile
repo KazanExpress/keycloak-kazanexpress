@@ -9,7 +9,7 @@ ARG KEYCLOAK_VERSION
 RUN mkdir -p /src/extensions
 WORKDIR /src/extensions
 COPY extensions/pom.xml /src/extensions/pom.xml
-RUN mvn -T 1C install && rm -rf target
+RUN mvn -e -T 1C install && rm -rf target
 COPY extensions /src/extensions
 RUN mvn package
 
