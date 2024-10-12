@@ -1,3 +1,9 @@
+## v0.4.2 (2024-10-12)
+
+### Fix
+
+- update yandex idp provider config
+
 ## v0.4.1 (2024-10-12)
 
 ### Fix
